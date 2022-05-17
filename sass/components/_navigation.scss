@@ -1,0 +1,40 @@
+.navigation {
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  &__item::before {
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: var(--clr-white);
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      font-family: $font-sourcePro;
+      text-transform: uppercase;
+      position: relative;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+
+      border: 1.5px solid white;
+      width: 0.9rem;
+      height: 0.9rem;
+      border-radius: 50%;
+      left: -37%;
+      bottom: 22%;
+    }
+
+    &:hover::before {
+      background-color: var(--clr-white);
+    }
+  }
+}

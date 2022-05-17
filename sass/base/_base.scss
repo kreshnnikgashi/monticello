@@ -1,0 +1,66 @@
+:root {
+  --clr-primary: #55b7ff;
+  --clr-secondary: #7e5aff;
+
+  --clr-typography: #2c4058;
+
+  --clr-accent: #c4c4c4;
+
+  --clr-placeholder: #4b5562;
+
+  --clr-white: #fff;
+  --clr-black: #000;
+
+  --hero-1: url(../../images/hero-1.jpg);
+  --hero-2: url(../../images/hero-2.jpg);
+  --hero-3: url(../../images/hero-3.jpg);
+  --hero-4: url(../../images/hero-4.jpg);
+  --hero-5: url(../../images/hero-5.jpg);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; //10px/16px = 62.5% = 1rem
+
+  @include respond(tab-land) {
+    // width < 1200?
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+  }
+
+  @include respond(tab-port) {
+    // width < 900?
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12, 12/16
+  }
+}
+
+body {
+  box-sizing: border-box;
+}
+
+ul {
+  li {
+    list-style: none;
+  }
+}
+
+a:link,
+a:active {
+  text-decoration: none;
+  color: var(--clr-white);
+}

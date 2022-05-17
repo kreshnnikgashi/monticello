@@ -1,0 +1,13 @@
+$font-montserrat: 'Montserrat', sans-serif;
+$font-sourcePro: 'Source Sans Pro', sans-serif;
+$font-openSans: 'Open Sans', sans-serif;
+
+// COLORS
+
+$linear-gradient: linear-gradient(
+  45deg,
+  var(--clr-primary),
+  var(--clr-secondary)
+);
+
+$overlay-gradient: linear-gradient(var(--clr-typography), transparent);

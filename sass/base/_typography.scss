@@ -1,0 +1,59 @@
+// Three fonts used from google
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700;800&family=Source+Sans+Pro:wght@400;600&display=swap');
+
+.heading-primary {
+  color: var(--clr-white);
+  text-transform: uppercase;
+  font-family: $font-montserrat;
+  text-align: center;
+
+  &--main {
+    font-size: 5rem;
+    line-height: 9.7rem;
+    display: block;
+    font-weight: 700;
+
+    @include respond(tab-port) {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    @include respond(tab-land) {
+      font-size: 4.5rem;
+      line-height: 8.7rem;
+    }
+  }
+
+  &--sub {
+    display: block;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+  }
+}
+
+.heading-secondary {
+  font-family: $font-montserrat;
+  font-weight: 700;
+  color: var(--clr-typography);
+  font-size: 4.4rem;
+  line-height: 5.3rem;
+  margin-bottom: 8.9rem;
+}
+
+.address {
+  font-family: $font-openSans;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: var(--clr-black);
+}
+
+.date {
+  font-family: $font-montserrat;
+  color: var(--clr-primary);
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  font-weight: 400;
+}
