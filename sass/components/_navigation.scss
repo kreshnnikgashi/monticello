@@ -4,9 +4,10 @@
     justify-content: center;
     align-items: center;
     gap: 5rem;
-  }
 
-  &__item::before {
+    @include respond(tab-port) {
+      display: none;
+    }
   }
 
   &__link {

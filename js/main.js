@@ -1,6 +1,8 @@
-// Hero Slider with Slick
+'use strict';
 
-const swiper = new Swiper('.swiper', {
+// * ===============================Hero Slider =======================================
+
+const swiper = new Swiper('.hero-slider', {
   // Optional parameters
   direction: 'vertical',
   loop: true,
@@ -15,20 +17,42 @@ const swiper = new Swiper('.swiper', {
   //   delay: 3500,
   //   disableOnInteraction: true,
   // },
-  // Navigation arrows
-
-  // And if we need scrollbar
 });
 
-// Animated Hamburger Menu
+//* ========================== Hamburger Menu =========================================
 
-const btnHamburger = document.querySelector('#btnHamburger');
-const header = document.querySelector('.header');
+const btnOpen = document.getElementById('btnHmaburger');
+const btnClose = document.querySelector('#closeMenu');
+const menuEl = document.getElementById('menu');
+const overlayEl = document.getElementById('overlay');
 
-btnHamburger.addEventListener('click', () => {
-  if (header.classList.contains('open')) {
-    header.classList.remove('open');
+const openMenu = () => {
+  menuEl.classList.remove('closed');
+  overlayEl.classList.remove('hidden');
+};
+
+const closeMenu = () => {
+  menuEl.classList.add('closed');
+  overlayEl.classList.add('hidden');
+};
+
+btnHamburger.addEventListener('click', openMenu);
+btnClose.addEventListener('click', closeMenu);
+overlayEl.addEventListener('click', closeMenu);
+
+//* ========================== Sticky Header  =========================================
+
+const headerEl = document.querySelector('#header');
+const topOfHeader = headerEl.offsetTop;
+
+const fixNav = () => {
+  if (window.scrollY > topOfHeader) {
+    headerEl.classList.add('fixed-nav');
+    headerEl.style.position = 'fixed';
   } else {
-    header.classList.add('open');
+    headerEl.classList.remove('fixed-nav');
+    headerEl.style.position = 'absolute';
   }
-});
+};
+
+window.addEventListener('scroll', fixNav);

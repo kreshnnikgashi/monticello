@@ -23,57 +23,130 @@
     <title>Monticello - Real Estate</title>
   </head>
   <body>
-    <header class="header-section">
-      <div class="header-section__overlay"></div>
-      <div class="header">
-        <a href="#">
-          <img src="images/Logo.svg" alt="Logo" class="header__logo" />
+    <!-- ====================== Hamburger Menu ========================================= -->
+
+    <div class="menu closed" id="menu">
+      <button class="menu__close-btn" id="closeMenu">&times;</button>
+
+      <div class="menu__container">
+        <a href="#" style="display: inline-block">
+          <img src="images/Logo.svg" alt="Logo" class="menu__logo" />
         </a>
 
-        <nav class="navigation">
-          <ul class="navigation__list">
-            <li class="navigation__item">
-              <a href="#" class="navigation__link">About Us</a>
-            </li>
-            <li class="navigation__item">
-              <a href="#" class="navigation__link">Projects</a>
-            </li>
-            <li class="navigation__item">
-              <a href="#" class="navigation__link">News</a>
-            </li>
-            <li class="navigation__item">
-              <a href="#" class="navigation__link">Contact</a>
-            </li>
-          </ul>
-        </nav>
+        <ul class="menu__navigation">
+          <li class="menu__navigation__item">
+            <a href="#about-us" class="menu__navigation__link">About Us</a>
+          </li>
+          <li class="menu__navigation__item">
+            <a href="#projects" class="menu__navigation__link">Projects</a>
+          </li>
+          <li class="menu__navigation__item">
+            <a href="#news" class="menu__navigation__link"
+              >News &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a
+            >
+          </li>
+          <li class="menu__navigation__item">
+            <a href="#contact" class="menu__navigation__link">Contact</a>
+          </li>
+        </ul>
 
-        <ul class="social-icon">
-          <li class="social-icon__item">
+        <ul class="menu__icon">
+          <li class="menu__icon__item">
             <a
               href="https://facebook.com/kreshnnikgashi"
-              class="social-icon__link"
+              class="menu__icon__link"
             >
-              <i class="fa-brands fa-facebook-f social-icon__icon"></i>
+              <i class="fa-brands fa-facebook-f menu__icon__icon"></i>
             </a>
           </li>
-          <li class="social-icon__item">
+          <li class="menu__icon__item">
             <a
               href="https://twitter.com/kreshnnikgashi"
-              class="social-icon__link"
+              class="menu__icon__link"
             >
-              <i class="fa-brands fa-twitter social-icon__icon"></i>
+              <i class="fa-brands fa-twitter menu__icon__icon"></i>
             </a>
           </li>
-          <li class="social-icon__item">
+          <li class="menu__icon__item">
             <a
               href="https://instagram.com/kreshnnikgashi"
-              class="social-icon__link"
+              class="menu__icon__link"
             >
-              <i class="fa-brands fa-instagram social-icon__icon"></i>
+              <i class="fa-brands fa-instagram menu__icon__icon"></i>
             </a>
           </li>
         </ul>
       </div>
+    </div>
+    <div class="overlay hidden" id="overlay"></div>
+
+    <!-- ======================= Header + Banner ======================================= -->
+
+    <header class="header-section">
+      <div class="header--container" id="header">
+        <div class="header">
+          <a href="#">
+            <img src="images/Logo.svg" alt="Logo" class="header__logo" />
+          </a>
+
+          <nav class="navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a href="#about-us" class="navigation__link">About Us</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#projects" class="navigation__link">Projects</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#news" class="navigation__link">News </a>
+              </li>
+              <li class="navigation__item">
+                <a href="#contact" class="navigation__link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="social-icon">
+            <li class="social-icon__item">
+              <a
+                href="https://facebook.com/kreshnnikgashi"
+                class="social-icon__link"
+              >
+                <i
+                  class="fa-brands fa-facebook-f social-icon__icon social-icon__icon--1"
+                ></i>
+              </a>
+            </li>
+            <li class="social-icon__item">
+              <a
+                href="https://twitter.com/kreshnnikgashi"
+                class="social-icon__link"
+              >
+                <i
+                  class="fa-brands fa-twitter social-icon__icon social-icon__icon--2"
+                ></i>
+              </a>
+            </li>
+            <li class="social-icon__item">
+              <a
+                href="https://instagram.com/kreshnnikgashi"
+                class="social-icon__link"
+              >
+                <i
+                  class="fa-brands fa-instagram social-icon__icon social-icon__icon--3"
+                ></i>
+              </a>
+            </li>
+          </ul>
+
+          <a href="#" class="header__toggle" id="btnHamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
+      </div>
+
       <!-- Slider main container -->
       <div class="swiper hero-slider">
         <!-- Additional required wrapper -->
@@ -83,9 +156,9 @@
             <div class="hero-slider__img hero-slider__img--1"></div>
             <div class="hero-slider__txt">
               <h1 class="heading-primary">
-                <span class="heading-primary--main">SIMPLE & MODERN</span
+                <span class="heading-primary--main">Simple & Modern</span
                 ><span class="heading-primary--sub"
-                  >WE MAKE THE WORLD BEAUTIFUL EVERYDAY</span
+                  >We make the world beautiful everyday</span
                 >
               </h1>
             </div>
@@ -95,8 +168,10 @@
             <div class="hero-slider__img hero-slider__img--2"></div>
             <div class="hero-slider__txt">
               <h2 class="heading-primary">
-                <span class="heading-primary--main">Something Else</span
-                ><span class="heading-primary--sub">Else</span>
+                <span class="heading-primary--main">Iconic Buildings</span
+                ><span class="heading-primary--sub"
+                  >We seek perfection and that is what makes us great</span
+                >
               </h2>
             </div>
           </div>
@@ -105,8 +180,10 @@
             <div class="hero-slider__img hero-slider__img--3"></div>
             <div class="hero-slider__txt">
               <h2 class="heading-primary u-text-align-center">
-                <span class="heading-primary--main">Something</span
-                ><span class="heading-primary--sub">Hehehe</span>
+                <span class="heading-primary--main">Great Architecture</span
+                ><span class="heading-primary--sub"
+                  >We make the best buildings in the world</span
+                >
               </h2>
             </div>
           </div>
@@ -115,8 +192,10 @@
             <div class="hero-slider__img hero-slider__img--4"></div>
             <div class="hero-slider__txt">
               <h2 class="heading-primary u-text-align-center">
-                <span class="heading-primary--main">Something</span
-                ><span class="heading-primary--sub">Hehehe</span>
+                <span class="heading-primary--main">Satisfied Clients</span
+                ><span class="heading-primary--sub"
+                  >We tend to make our clients satisfied</span
+                >
               </h2>
             </div>
           </div>
@@ -125,8 +204,10 @@
             <div class="hero-slider__img hero-slider__img--5"></div>
             <div class="hero-slider__txt">
               <h2 class="heading-primary u-text-align-center">
-                <span class="heading-primary--main">Something</span
-                ><span class="heading-primary--sub">Hehehe</span>
+                <span class="heading-primary--main">Greatness...</span
+                ><span class="heading-primary--sub"
+                  >Lorem ipsum dolor sit amet.</span
+                >
               </h2>
             </div>
           </div>
@@ -136,12 +217,15 @@
       </div>
 
       <div class="hero-arrow">
-        <a href="#" class="hero-arrow__link"
+        <a href="#projects" class="hero-arrow__link"
           ><i class="fa-solid fa-angle-down hero-arrow__icon"></i
         ></a>
       </div>
     </header>
 
+    <!-- ======================= Main Section ========================================== -->
+
+    <!-- ========================= Footer ============================================== -->
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
   </body>
