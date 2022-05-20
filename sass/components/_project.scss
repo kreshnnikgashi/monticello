@@ -11,14 +11,14 @@
     }
 
     @include respond(phone) {
-      margin-bottom: 12rem;
+      margin-bottom: 7rem;
     }
   }
 
   &--bottom {
     display: flex;
     align-items: center;
-    gap: 5rem;
+    gap: 4rem;
 
     @include respond(tab-port) {
       flex-direction: column-reverse;
@@ -30,13 +30,30 @@
     flex: 0 0 60%;
     position: relative;
 
+    &--top {
+    }
+
+    &--bottom {
+      @include respond(big-desktop) {
+        margin-left: 8rem;
+      }
+    }
+
     &::after {
       content: '';
       position: absolute;
       top: -5.7rem;
       width: 100%;
       height: 100%;
+      max-width: 63rem;
       z-index: -5;
+      @include respond(big-desktop) {
+        display: none;
+      }
+
+      @include respond(tab-port) {
+        display: none;
+      }
     }
 
     &--top::after {

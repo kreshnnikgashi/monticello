@@ -5,4 +5,8 @@
 .news-section {
   padding: 15rem 0;
   background-image: $news-gradient, url(../../images/news-section.svg);
+  &--container {
+    width: 86%;
+    margin: 0 7%;
+  }
 }
