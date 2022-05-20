@@ -1,0 +1,77 @@
+.project {
+  &--top {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 14rem;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    @include respond(phone) {
+      margin-bottom: 12rem;
+    }
+  }
+
+  &--bottom {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+
+    @include respond(tab-port) {
+      flex-direction: column-reverse;
+      justify-content: center;
+    }
+  }
+
+  &__image-composition {
+    flex: 0 0 60%;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -5.7rem;
+      width: 100%;
+      height: 100%;
+      z-index: -5;
+    }
+
+    &--top::after {
+      background-color: var(--clr-primary);
+      left: -13.5%;
+
+      @include respond(tab-port) {
+        left: -21.1%;
+      }
+    }
+
+    &--bottom::after {
+      background-color: var(--clr-secondary);
+      right: -13.5%;
+      @include respond(tab-port) {
+        right: -8.9%;
+      }
+      @include respond(phone) {
+        right: -8%;
+      }
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+    height: 100%;
+  }
+
+  &__details {
+    @include respond(tab-port) {
+      width: 90%;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+}

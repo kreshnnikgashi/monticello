@@ -10,7 +10,8 @@ $linear-gradient: linear-gradient(
   var(--clr-secondary)
 );
 
-$overlay-gradient: linear-gradient(var(--clr-typography), transparent);
+$news-gradient: linear-gradient(to right top, #24ccfa, #3c7fd4);
+
 $circle-border: rgba(#fff, 0.4);
 $white-color: #fff;
 $opacity: 0.4;

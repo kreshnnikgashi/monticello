@@ -1,3 +1,8 @@
 .header-section {
   position: relative;
 }
+
+.news-section {
+  padding: 15rem 0;
+  background-image: $news-gradient, url(../../images/news-section.svg);
+}

@@ -49,6 +49,26 @@
 }
 
 .heading-secondary {
+  color: var(--clr-typography);
+  font-family: $font-montserrat;
+  text-transform: uppercase;
+
+  &--main {
+    font-weight: 700;
+    font-size: 4.4rem;
+    line-height: 5.3rem;
+    margin-bottom: 2rem;
+    display: block;
+  }
+
+  &--sub {
+    font-weight: 400;
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+  }
+}
+
+.heading-section {
   font-family: $font-montserrat;
   font-weight: 700;
   color: var(--clr-typography);
@@ -56,12 +76,29 @@
   line-height: 5.3rem;
   margin-bottom: 8.9rem;
   position: relative;
+  text-transform: uppercase;
+
+  &--form {
+    margin-bottom: 4rem;
+  }
+
+  &--news {
+    color: var(--clr-white);
+  }
 
   &::before {
+    content: '';
+    background-color: var(--clr-typography);
     width: 10rem;
     height: 0.1rem;
-    background-color: var(--clr-typography);
     position: absolute;
+    left: 50%;
+    top: -3rem;
+    transform: translateX(-50%);
+  }
+
+  &--news::before {
+    background-color: var(--clr-white);
   }
 }
 
@@ -80,4 +117,12 @@
   font-size: 1.4rem;
   line-height: 1.7rem;
   font-weight: 400;
+}
+
+.description {
+  font-family: $font-openSans;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  color: var(--clr-typography);
+  margin-bottom: 4rem;
 }

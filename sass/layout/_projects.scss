@@ -1,0 +1,9 @@
+.projects-section {
+  width: 86%;
+  margin: 0 7%;
+  padding: 12rem 0;
+
+  @include respond(phone) {
+    padding-bottom: 6rem;
+  }
+}

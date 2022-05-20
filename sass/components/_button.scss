@@ -1,0 +1,22 @@
+.btn {
+  padding: 1.6rem 4rem;
+  border: 1px solid var(--clr-typography);
+  font-family: $font-montserrat;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  color: var(--clr-black);
+  cursor: pointer;
+
+  &--form {
+  }
+
+  &--projects {
+    margin-bottom: 6rem;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: var(--clr-typography);
+      color: var(--clr-white);
+    }
+  }
+}

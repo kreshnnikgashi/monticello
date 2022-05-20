@@ -18,6 +18,7 @@
   --hero-5: url(../../images/hero-5.jpg);
 }
 
+//* ============================ RESET CSS ===================================
 * {
   padding: 0;
   margin: 0;
@@ -33,6 +34,8 @@
 
 html {
   font-size: 62.5%; //10px/16px = 62.5% = 1rem
+
+  scroll-behavior: smooth;
 
   @include respond(tab-land) {
     // width < 1200?
@@ -65,12 +68,23 @@ a:active {
   color: var(--clr-white);
 }
 
+button {
+  border: none;
+  background: none;
+}
+
+//* ============================= HELPER CLASSES ===============================
+
 .fixed-nav {
   position: fixed;
-  background-image: $linear-gradient;
+  background-image: $linear-gradient; // Sticky Navigation
 }
 
 .container {
   width: 86%;
   margin: 0 7%;
+}
+
+.noscroll {
+  overflow: hidden; // Lock scroll when menu is open
 }
