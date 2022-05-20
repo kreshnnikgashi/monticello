@@ -65,15 +65,40 @@ const swiperNews = new Swiper('.news-slider', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
+  spaceBetween: 20,
+  centeredSlides: true,
 
-  // If we need pagination
+  initialSlide: 1,
+
   pagination: {
-    el: '.swiper-pagination',
+    el: '.swiper-bullets',
   },
 
-  // Navigation arrows
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+    600: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+
+    700: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+  },
+
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    prevEl: '.swiper-button-prev-unique',
+    nextEl: '.swiper-button-next-unique',
   },
 });
+
+//* ================================== Modal Window ====================================

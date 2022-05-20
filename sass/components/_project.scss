@@ -18,7 +18,7 @@
   &--bottom {
     display: flex;
     align-items: center;
-    gap: 4rem;
+    gap: 6rem;
 
     @include respond(tab-port) {
       flex-direction: column-reverse;
@@ -29,15 +29,6 @@
   &__image-composition {
     flex: 0 0 60%;
     position: relative;
-
-    &--top {
-    }
-
-    &--bottom {
-      @include respond(big-desktop) {
-        margin-left: 8rem;
-      }
-    }
 
     &::after {
       content: '';
@@ -68,6 +59,7 @@
     &--bottom::after {
       background-color: var(--clr-secondary);
       right: -13.5%;
+
       @include respond(tab-port) {
         right: -8.9%;
       }

@@ -34,7 +34,8 @@
       bottom: 22%;
     }
 
-    &:hover::before {
+    &:hover::before,
+    &:active::before {
       background-color: var(--clr-white);
     }
   }
