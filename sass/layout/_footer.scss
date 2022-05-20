@@ -1,0 +1,47 @@
+.footer {
+  background-image: url(../../images/footer.svg), $linear-gradient;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 12rem;
+
+  &--container {
+    width: 70%;
+    margin: 0 auto;
+
+    @include respond(tab-port) {
+      width: 86%;
+      margin: 0 7%;
+    }
+
+    @include respond(phone) {
+      width: 92%;
+      margin: 0 4%;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4.1rem;
+
+    @include respond(tab-port) {
+      gap: 4rem;
+      flex-direction: column;
+    }
+  }
+
+  &__copyright {
+    font-family: $font-montserrat;
+    font-size: 1.4rem;
+    color: var(--clr-white);
+    line-height: 1.7rem;
+    font-weight: 400;
+    width: 100%;
+
+    @include respond(tab-port) {
+      text-align: center;
+    }
+  }
+}

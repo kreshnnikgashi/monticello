@@ -7,6 +7,12 @@
     display: none;
   }
 
+  &--footer {
+    @include respond(tab-land) {
+      display: flex;
+    }
+  }
+
   &__link {
     &:link,
     &:visited {
