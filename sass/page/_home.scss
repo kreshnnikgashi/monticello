@@ -10,7 +10,7 @@
   position: relative;
 
   @include respond(phone) {
-    padding: 8rem 0;
+    padding: 9rem 0;
   }
 
   &--container {
@@ -22,5 +22,25 @@
       width: 92%;
       margin: 0 4%;
     }
+  }
+}
+
+.gallery-section {
+  width: 86%;
+  margin: 0 7%;
+
+  padding: 12rem 0;
+
+  @include respond(phone) {
+    width: 92%;
+    margin: 0 4%;
+
+    padding: 8rem 0;
+    padding-bottom: 4rem;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
   }
 }
