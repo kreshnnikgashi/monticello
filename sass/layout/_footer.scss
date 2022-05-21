@@ -17,12 +17,11 @@
     @include respond(phone) {
       width: 92%;
       margin: 0 4%;
-
-      padding-bottom: 2rem;
     }
   }
 
   &__logo {
+    margin-top: 5.4rem;
     display: flex;
     align-items: center;
     justify-content: space-between;

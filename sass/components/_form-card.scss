@@ -1,7 +1,7 @@
 .form-card {
   background-color: var(--clr-white);
   position: absolute;
-  bottom: -10%;
+  bottom: -15%;
   padding: 6rem;
   left: 50%;
   transform: translateX(-50%);
@@ -10,10 +10,25 @@
   background-position: bottom;
   background-repeat: no-repeat;
 
-  @include respond(phone) {
-    width: 86%;
+  @include respond(tab-land) {
+    width: 65%;
     margin: 0 auto;
-    padding: 5rem;
+    padding: 6rem 2rem;
+  }
+
+  @include respond(tab-port) {
+    width: 45%;
+  }
+
+  @include respond(phone) {
+    width: 95%;
+    margin: 0 auto;
+    padding: 6rem 1rem;
+  }
+
+  @include respond(fold-phone) {
+    width: 95%;
+    margin: 0 auto;
   }
 
   // Card Body under Heading
@@ -21,8 +36,11 @@
   &__body {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-
+    justify-content: center;
+    gap: 5.4rem;
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
     @include respond(phone) {
       flex-direction: column;
       gap: 5rem;
@@ -65,12 +83,7 @@
     line-height: 2.7rem;
     transition: all 0.3s ease-in-out;
     width: 100%;
-
-    &--full-name {
-    }
-
-    &--email {
-    }
+    width: 31rem;
 
     &:focus {
       outline: none;
@@ -80,5 +93,11 @@
     &::placeholder {
       color: var(--clr-accent);
     }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 }

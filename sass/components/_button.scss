@@ -6,10 +6,12 @@
   line-height: 1.7rem;
   color: var(--clr-black);
   cursor: pointer;
+  text-transform: uppercase;
 
   display: inline-block;
 
   &--form {
+    padding: 1.2rem 3.4rem;
   }
 
   &--projects {

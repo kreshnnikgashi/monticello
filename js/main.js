@@ -72,6 +72,7 @@ const swiperNews = new Swiper('.news-slider', {
 
   pagination: {
     el: '.swiper-bullets',
+    clickable: true,
   },
 
   breakpoints: {
