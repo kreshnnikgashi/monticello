@@ -103,37 +103,7 @@ const swiperNews = new Swiper('.news-slider', {
 
 //* ================================== Load More ====================================
 
-const work = document.querySelector('#grid');
-const items = Array.from(work.querySelectorAll('.item'));
-const loadMore = document.getElementById('see-more');
-
-const maxItems = 5;
-const loadItems = 4;
-const hiddenItems = Array.from(document.querySelectorAll('.hiddenStyle'));
-
-items.forEach(function (item, index) {
-  console.log(item.innerText, index);
-  if (index > maxItems - 1) {
-    item.classList.add('hiddenStyle');
-  }
-});
-
-loadMore.addEventListener('click', function () {
-  [].forEach.call(
-    document.querySelectorAll('.hiddenStyle'),
-    function (item, index) {
-      if (index < loadItems) {
-        item.classList.remove('hiddenStyle');
-      }
-
-      if (document.querySelectorAll('.hiddenStyle').length === 0) {
-        loadMore.style.display = 'none';
-      }
-    }
-  );
-});
-
-//* ============================== Map ==========================================================
+//* ================================= Maps   ====================================
 
 map = new google.maps.Map(document.getElementById('map'), {
   center: { lat: -34.397, lng: 150.644 },

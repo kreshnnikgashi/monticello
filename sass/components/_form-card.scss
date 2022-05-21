@@ -1,0 +1,84 @@
+.form-card {
+  background-color: var(--clr-white);
+  position: absolute;
+  bottom: -10%;
+  padding: 6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  background-image: url(../../images/form-card.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+
+  @include respond(phone) {
+    width: 86%;
+    margin: 0 auto;
+    padding: 5rem;
+  }
+
+  // Card Body under Heading
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include respond(phone) {
+      flex-direction: column;
+      gap: 5rem;
+    }
+  }
+
+  // Card list on the left side
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__item {
+    font-family: $font-montserrat;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    font-weight: 400;
+
+    i {
+      color: var(--clr-secondary);
+    }
+  }
+
+  // card form on the right side
+
+  &__form {
+    &--container {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__input {
+    border: none;
+    border-bottom: 1px solid var(--clr-accent);
+    padding-bottom: 1rem;
+    font-family: $font-montserrat;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+
+    &--full-name {
+    }
+
+    &--email {
+    }
+
+    &:focus {
+      outline: none;
+      border-color: var(--clr-black);
+    }
+
+    &::placeholder {
+      color: var(--clr-accent);
+    }
+  }
+}

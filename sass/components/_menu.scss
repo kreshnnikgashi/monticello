@@ -10,6 +10,8 @@
   width: 95vw;
   height: auto;
 
+  -webkit-overflow-scrolling: touch;
+
   &__container {
     display: flex;
 

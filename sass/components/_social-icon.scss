@@ -27,6 +27,10 @@
     border-radius: 50%;
 
     display: inline-block;
+    &:hover {
+      background-color: var(--clr-white);
+      color: var(--clr-typography);
+    }
 
     &--1 {
       padding: 1.1rem 1.5rem;
