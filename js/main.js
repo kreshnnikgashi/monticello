@@ -26,6 +26,7 @@ const btnClose = document.querySelector('#closeMenu');
 const menuEl = document.getElementById('menu');
 const overlayEl = document.getElementById('overlay');
 const bodyEl = document.querySelector('body');
+const linksEl = document.querySelectorAll('#menu-link');
 
 const openMenu = () => {
   menuEl.classList.remove('closed');
@@ -104,10 +105,33 @@ const swiperNews = new Swiper('.news-slider', {
 
 //* ================================== Load More ====================================
 
-//* ================================= Maps   ====================================
+const work = document.querySelector('.grid-container');
+const items = Array.from(work.querySelectorAll('.item'));
+const loadMore = document.getElementById('loadMore');
 
-map = new google.maps.Map(document.getElementById('map'), {
-  center: { lat: -34.397, lng: 150.644 },
-  zoom: 8,
-  mapId: '571fd698d9c4e7cc',
+const maxItems = 1;
+const loadItems = 1;
+const hiddenItems = Array.from(document.querySelectorAll('.hiddenStyle'));
+
+items.forEach(function (item, index) {
+  console.log(item.innerText, index);
+  if (index > maxItems - 1) {
+    item.classList.add('hiddenStyle');
+  }
+});
+
+loadMore.addEventListener('click', function () {
+  [].forEach.call(
+    document.querySelectorAll('.hiddenStyle'),
+    function (item, index) {
+      if (index < loadItems) {
+        item.classList.remove('hiddenStyle');
+        loadMore.style.transition = 'all .3s ease-in-out';
+      }
+
+      if (document.querySelectorAll('.hiddenStyle').length === 0) {
+        loadMore.style.display = 'none';
+      }
+    }
+  );
 });
