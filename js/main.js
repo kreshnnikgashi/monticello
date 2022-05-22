@@ -12,37 +12,50 @@ const swiper = new Swiper('.hero-slider', {
     el: '.swiper-pagination',
     clickable: true,
   },
-
-  // autoplay: {
-  //   delay: 3500,
-  //   disableOnInteraction: true,
-  // },
 });
 
 //* ========================== Hamburger Menu =========================================
 
-const btnOpen = document.getElementById('btnHmaburger');
-const btnClose = document.querySelector('#closeMenu');
-const menuEl = document.getElementById('menu');
-const overlayEl = document.getElementById('overlay');
-const bodyEl = document.querySelector('body');
-const linksEl = document.querySelectorAll('#menu-link');
+// const btnOpen = document.getElementById('btnHmaburger');
+// const btnClose = document.querySelector('#closeMenu');
+// const menuEl = document.getElementById('menu');
+// const overlayEl = document.getElementById('overlay');
+// const bodyEl = document.querySelector('body');
+// const linksEl = document.querySelectorAll('#menu-link');
 
-const openMenu = () => {
-  menuEl.classList.remove('closed');
-  overlayEl.classList.remove('hidden');
-  bodyEl.classList.add('noscroll');
-};
+// const openMenu = () => {
+//   menuEl.classList.remove('closed');
+//   overlayEl.classList.remove('hidden');
+//   bodyEl.classList.add('noscroll');
+// };
 
-const closeMenu = () => {
-  menuEl.classList.add('closed');
-  overlayEl.classList.add('hidden');
-  bodyEl.classList.remove('noscroll');
-};
+// const closeMenu = () => {
+//   menuEl.classList.add('closed');
+//   overlayEl.classList.add('hidden');
+//   bodyEl.classList.remove('noscroll');
+// };
 
-btnHamburger.addEventListener('click', openMenu);
-btnClose.addEventListener('click', closeMenu);
-overlayEl.addEventListener('click', closeMenu);
+// btnHamburger.addEventListener('click', openMenu);
+// btnClose.addEventListener('click', closeMenu);
+// overlayEl.addEventListener('click', closeMenu);
+
+const hamburgerEl = document.querySelector('#btnHamburger');
+const menuEl = document.querySelector('#menu');
+const overlayEl = document.querySelector('#overlay');
+
+hamburgerEl.addEventListener('click', () => {
+  hamburgerEl.classList.toggle('active');
+  menuEl.classList.toggle('active');
+  overlayEl.classList.toggle('hidden');
+});
+
+document.querySelectorAll('.menu__navigation__link').forEach(n =>
+  n.addEventListener('click', () => {
+    hamburgerEl.classList.remove('active');
+    menuEl.classList.remove('active');
+    overlayEl.classList.add('hidden');
+  })
+);
 
 //* ========================== Sticky Header  =========================================
 
@@ -70,6 +83,11 @@ const swiperNews = new Swiper('.news-slider', {
   centeredSlides: true,
 
   initialSlide: 1,
+
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: true,
+  },
 
   pagination: {
     el: '.swiper-bullets',

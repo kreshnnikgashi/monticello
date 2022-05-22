@@ -1,16 +1,21 @@
 .menu {
   background-color: var(--clr-secondary);
-  position: absolute;
-  top: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
+  position: fixed;
+  top: 11rem;
+  left: -100%;
   z-index: 15;
-  transition: all 0.5s ease-out;
+
   padding: 2rem 5rem 4rem 5rem;
   width: 95vw;
   height: auto;
+  transition: 0.3s;
 
-  -webkit-overflow-scrolling: touch;
+  @include respond(tab-land) {
+    width: 60vw;
+  }
+  @include respond(phone) {
+    width: 80vw;
+  }
 
   &__container {
     display: flex;
@@ -20,9 +25,14 @@
     gap: 8rem;
   }
 
-  &.closed {
-    transform: translate(-50%, -200%);
+  &.active {
+    left: 50%;
+    transform: translate(-50%);
   }
+
+  // &.closed {
+  //   display: none;
+  // }
 
   &__close-btn {
     display: inline-block;
@@ -92,11 +102,13 @@
 .overlay {
   position: absolute;
   inset: 0;
+  top: 11rem;
   z-index: 14;
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-backdrop-filter: blur(50%);
   height: 100vh;
   backdrop-filter: blur(50%);
+  overflow-y: hidden;
 
   &.hidden {
     display: none;
