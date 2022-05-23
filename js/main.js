@@ -42,11 +42,13 @@ const swiper = new Swiper('.hero-slider', {
 const hamburgerEl = document.querySelector('#btnHamburger');
 const menuEl = document.querySelector('#menu');
 const overlayEl = document.querySelector('#overlay');
+const bodyEl = document.querySelector('body');
 
 hamburgerEl.addEventListener('click', () => {
   hamburgerEl.classList.toggle('active');
   menuEl.classList.toggle('active');
   overlayEl.classList.toggle('hidden');
+  bodyEl.style.overflow = 'hidden';
 });
 
 document.querySelectorAll('.menu__navigation__link').forEach(n =>
@@ -54,6 +56,7 @@ document.querySelectorAll('.menu__navigation__link').forEach(n =>
     hamburgerEl.classList.remove('active');
     menuEl.classList.remove('active');
     overlayEl.classList.add('hidden');
+    bodyEl.style.overflow = 'auto';
   })
 );
 
